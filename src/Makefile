@@ -3,13 +3,13 @@ INCLUDE=../include
 CSOURCES=list.c vector.c linked_list.c dict.c bst_dict.c hash_table.c hash.c
 OBJECTS=$(CSOURCES:.c=.o)
 
-all: libcontainers.so test
+all: libbitbag.so test
 
-test: libcontainers.so main.c
-	$(CC) $(CFLAGS) -L . -I $(INCLUDE) -lcontainers main.c -o test
+test: libbitbag.so main.c
+	$(CC) $(CFLAGS) -L . -I $(INCLUDE) -lbitbag main.c -o test
 
-libcontainers.so: $(OBJECTS)
-	$(CC) $(CFLAGS) -shared -o libcontainers.so $(OBJECTS)
+libbitbag.so: $(OBJECTS)
+	$(CC) $(CFLAGS) -shared -o libbitbag.so $(OBJECTS)
 
 .c.o:
 	$(CC) $(CFLAGS) -I $(INCLUDE) -c $< -o $@ 

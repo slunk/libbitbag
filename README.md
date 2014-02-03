@@ -33,10 +33,10 @@ A generic container library for C.
 
 ### Compilation
 
-        > cd path/to/libcontainers
+        > cd path/to/libbitbag
         > make
-        > gcc -L path/to/libcontainers/lib -I path/to/libcontainers/include your_program.c
-        > export LD_LIBRARY_PATH=path/to/libcontainers/lib (DYLD_LIBRARY_PATH on some unices)
+        > gcc -L path/to/libbitbag/lib -I path/to/libbitbag/include your_program.c
+        > export LD_LIBRARY_PATH=path/to/libbitbag/lib (DYLD_LIBRARY_PATH on some unices)
 
 ## Todo
 
